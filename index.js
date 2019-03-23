@@ -234,6 +234,7 @@ class Transaction {
     if (this._chainId > 0) {
       sig.v += this._chainId * 2 + 8
     }
+    sig.v -= 27  // jnoodle add for conflux
     Object.assign(this, sig)
   }
 
