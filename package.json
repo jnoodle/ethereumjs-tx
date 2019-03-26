@@ -1,6 +1,6 @@
 {
   "name": "ethereumjs-tx",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "An simple module for creating, manipulating and signing ethereum transactions",
   "main": "es5/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "test": "npm run test:node && npm run test:browser",
     "test:browser": "karma start karma.conf.js",
     "test:node": "tape ./test/index.js",
-    "build:es5": "babel index.js --source-root ./ -d ./es5",
+    "build:es5": "babel index-es6.js --source-root ./ -d ./es5",
     "build:docs": "documentation --github  -f md ./index.js > ./docs/index.md && contributor"
   },
   "keywords": [

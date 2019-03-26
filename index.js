@@ -263,7 +263,10 @@ var Transaction = function () {
       if (this._chainId > 0) {
         sig.v += this._chainId * 2 + 8;
       }
-      sig.v -= 27; // jnoodle add for conflux
+      sig.v -= 27; // add for conflux
+      if (sig.v === 0) {
+        sig.v = '';
+      }
       Object.assign(this, sig);
     }
 
